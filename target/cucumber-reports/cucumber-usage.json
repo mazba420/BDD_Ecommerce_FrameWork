@@ -1,0 +1,128 @@
+[
+  {
+    "source": "user its on log in page",
+    "steps": [
+      {
+        "name": "user its on log in page",
+        "aggregatedDurations": {
+          "median": 1.4645314,
+          "average": 1.4645314
+        },
+        "durations": [
+          {
+            "duration": 1.4645314,
+            "location": "file:///C:/Users/Mazba/Desktop/New%20folder/Ecommerce_BDD_FrameWork/src/test/java/AppFeatures/loginPage.feature:5"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "users gets the title of the pages",
+    "steps": [
+      {
+        "name": "users gets the title of the pages",
+        "aggregatedDurations": {
+          "median": 0.0059843,
+          "average": 0.0059843
+        },
+        "durations": [
+          {
+            "duration": 0.0059843,
+            "location": "file:///C:/Users/Mazba/Desktop/New%20folder/Ecommerce_BDD_FrameWork/src/test/java/AppFeatures/loginPage.feature:6"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "page title should be {string}",
+    "steps": [
+      {
+        "name": "page title should be \"Login - My Store\"",
+        "aggregatedDurations": {
+          "median": 0.0039893,
+          "average": 0.0039893
+        },
+        "durations": [
+          {
+            "duration": 0.0039893,
+            "location": "file:///C:/Users/Mazba/Desktop/New%20folder/Ecommerce_BDD_FrameWork/src/test/java/AppFeatures/loginPage.feature:7"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "forgot password link should bd display",
+    "steps": [
+      {
+        "name": "forgot password link should bd display",
+        "aggregatedDurations": {
+          "median": 1.8586318,
+          "average": 1.8586318
+        },
+        "durations": [
+          {
+            "duration": 1.8586318,
+            "location": "file:///C:/Users/Mazba/Desktop/New%20folder/Ecommerce_BDD_FrameWork/src/test/java/AppFeatures/loginPage.feature:12"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "user enter username {string}",
+    "steps": [
+      {
+        "name": "user enter username \"dec2020secondbatch@gmail.com\"",
+        "aggregatedDurations": {
+          "median": 2.3196858,
+          "average": 2.3196858
+        },
+        "durations": [
+          {
+            "duration": 2.3196858,
+            "location": "file:///C:/Users/Mazba/Desktop/New%20folder/Ecommerce_BDD_FrameWork/src/test/java/AppFeatures/loginPage.feature:17"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "user enter password {string}",
+    "steps": [
+      {
+        "name": "user enter password \"Selenium@12345\"",
+        "aggregatedDurations": {
+          "median": 0.7925331,
+          "average": 0.7925331
+        },
+        "durations": [
+          {
+            "duration": 0.7925331,
+            "location": "file:///C:/Users/Mazba/Desktop/New%20folder/Ecommerce_BDD_FrameWork/src/test/java/AppFeatures/loginPage.feature:18"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "user click on log in button",
+    "steps": [
+      {
+        "name": "user click on log in button",
+        "aggregatedDurations": {
+          "median": 1.0749403,
+          "average": 1.0749403
+        },
+        "durations": [
+          {
+            "duration": 1.0749403,
+            "location": "file:///C:/Users/Mazba/Desktop/New%20folder/Ecommerce_BDD_FrameWork/src/test/java/AppFeatures/loginPage.feature:19"
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -30,13 +30,14 @@ public class ApplicationsHooks {
     public void launchBrowser(){
       String browserName =  prop.getProperty("browser");
       driverFactory = new DriverFactory();
-      driver = driverFactory.init_driver(browserName);
+      driver = driverFactory.init_driver("chrome");
 
     }
 
 
      @After(order = 0)
-     public void quiteBrowser(){
+     public void quiteBrowser() {
+
         driver.quit();
      }
 

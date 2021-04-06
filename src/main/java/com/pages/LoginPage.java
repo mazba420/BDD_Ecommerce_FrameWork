@@ -8,12 +8,12 @@ public class LoginPage {
    private WebDriver driver ;
 
     /**
-     * By locator of Log in page
+     * By locator of Log in page==> OR = Object repo
      */
     final   private By emailId = By.id("email");
     final   private By pwd = By.id("passwd");
     final   private By signIn = By.id("SubmitLogin");
-    final   private By forgotPasswordLink = By.linkText("Forgot your password?");
+    final   private By forgotPasswordLink = By.xpath("//a[text()='Forgot your password?']");
 
     /**
      * Constructor of the page class
@@ -26,7 +26,7 @@ public class LoginPage {
      * page Actions : Features (behaviour) of the page the form of method
      */
 
-    public String getLoginPage(){
+    public String getLoginPageTitle(){
        return driver.getTitle();
     }
 

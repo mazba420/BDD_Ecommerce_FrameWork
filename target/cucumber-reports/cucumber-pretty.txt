@@ -1,24 +1,20 @@
 
-Scenario: Log in page title                    [90m# src/test/java/AppFeatures/loginPage.feature:3[0m
-  [32mGiven [0m[32muser its on log in page[0m                [90m# stepdefinition.LoginPageSteps.user_its_on_log_in_page()[0m
-  [32mWhen [0m[32musers gets the title of the pages[0m       [90m# stepdefinition.LoginPageSteps.users_gets_the_title_of_the_pages()[0m
-  [32mThen [0m[32mpage title should be [0m[32m[1m"Login - My Store"[0m [90m# stepdefinition.LoginPageSteps.page_title_should_be(java.lang.String)[0m
+Scenario: Account page title                    [90m# src/test/java/AppFeatures/AccountPage.feature:9[0m
+  [32mGiven [0m[32muser already login into the application[0m [90m# stepdefinition.AccountPagesSteps.user_already_login_into_the_application(io.cucumber.datatable.DataTable)[0m
+  [32mGiven [0m[32muser is on account page[0m                 [90m# stepdefinition.AccountPagesSteps.user_is_on_account_page()[0m
 
-Scenario: Forgot password link                [90m# src/test/java/AppFeatures/loginPage.feature:10[0m
-  [32mWhen [0m[32mforgot password link should bd display[0m [90m# stepdefinition.LoginPageSteps.forgot_password_link_should_bd_display()[0m
-
-Scenario: Login with correct credentials                             [90m# src/test/java/AppFeatures/loginPage.feature:15[0m
-  [32mWhen [0m[32muser enter username [0m[32m[1m"dec2020secondbatch@gmail.com"[0m            [90m# stepdefinition.LoginPageSteps.user_enter_username(java.lang.String)[0m
-  [32mAnd [0m[32muser enter password [0m[32m[1m"Selenium@12345"[0m                           [90m# stepdefinition.LoginPageSteps.user_enter_password(java.lang.String)[0m
-  [32mAnd [0m[32muser click on log in button[0m                                    [90m# stepdefinition.LoginPageSteps.user_click_on_log_in_button()[0m
-  [31mThen [0m[31muser get the title of the accountPage [0m[31m[1m"My account - My Store"[0m [90m# stepdefinition.LoginPageSteps.user_get_the_title_of_the_account_page(java.lang.String)[0m
+Scenario: Account section count                 [90m# src/test/java/AppFeatures/AccountPage.feature:14[0m
+  [32mGiven [0m[32muser already login into the application[0m [90m# stepdefinition.AccountPagesSteps.user_already_login_into_the_application(io.cucumber.datatable.DataTable)[0m
+  [32mGiven [0m[32muser is on account page[0m                 [90m# stepdefinition.AccountPagesSteps.user_is_on_account_page()[0m
+  [31mThen [0m[31muser gets account section[0m                [90m# stepdefinition.AccountPagesSteps.user_gets_account_section(io.cucumber.datatable.DataTable)[0m
       [31mjava.lang.AssertionError
 	at org.junit.Assert.fail(Assert.java:86)
 	at org.junit.Assert.assertTrue(Assert.java:41)
 	at org.junit.Assert.assertTrue(Assert.java:52)
-	at stepdefinition.LoginPageSteps.user_get_the_title_of_the_account_page(LoginPageSteps.java:58)
-	at ✽.user get the title of the accountPage "My account - My Store"(file:///C:/Users/Mazba/Desktop/New%20folder/Ecommerce_BDD_FrameWork/src/test/java/AppFeatures/loginPage.feature:20)
+	at stepdefinition.AccountPagesSteps.user_gets_account_section(AccountPagesSteps.java:40)
+	at ✽.user gets account section(file:///C:/Users/Mazba/Desktop/New%20folder/Ecommerce_BDD_FrameWork/src/test/java/AppFeatures/AccountPage.feature:16)
 [0m
+  [36mAnd [0m[36maccount section should be [0m[36m[1m5[0m               [90m# stepdefinition.AccountPagesSteps.account_section_should_be(java.lang.Integer)[0m
 
-    Embedding Login_with_correct_credentials [image/png 157529 bytes]
+    Embedding Account_section_count [image/png 169357 bytes]
 

@@ -14,9 +14,9 @@ import java.util.Properties;
 public class ApplicationsHooks {
 
 
-    private DriverFactory driverFactory ;
+    public DriverFactory driverFactory ;
     private WebDriver driver ;
-    private ConfigReader configReader ;
+    public ConfigReader configReader ;
     Properties prop ;
 
     @Before(order = 0 )
@@ -30,14 +30,13 @@ public class ApplicationsHooks {
     public void launchBrowser(){
       String browserName =  prop.getProperty("browser");
       driverFactory = new DriverFactory();
-      driver = driverFactory.init_driver("chrome");
+      driver = driverFactory.init_driver(browserName);
 
     }
 
 
      @After(order = 0)
-     public void quiteBrowser() {
-
+     public void quiteBrowser()  {
         driver.quit();
      }
 

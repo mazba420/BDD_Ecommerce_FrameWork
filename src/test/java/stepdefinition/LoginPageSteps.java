@@ -8,55 +8,60 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 
 public class LoginPageSteps {
+    final private LoginPage loginPage = new LoginPage(DriverFactory.getDriver()) ;
 
-   private LoginPage loginPage = new LoginPage(DriverFactory.getDriver()) ;
-   private static String titleOfLogInPage ;
-
-    @Given("user its on log in page")
-    public void user_its_on_log_in_page() {
-      DriverFactory.getDriver().get("http://automationpractice.com/index.php?controller=authentication&back=my-account");
-
-    }
-    @When("users gets the title of the pages")
-    public void users_gets_the_title_of_the_pages() {
-        titleOfLogInPage = loginPage.getLoginPageTitle();
-        System.out.println("Log in page title is ==> "+titleOfLogInPage);
+    @Given("User is on home page")
+    public void user_is_on_home_page() {
+       DriverFactory.getDriver().get("http://automationpractice.com/index.php");
     }
 
-    @Then("page title should be {string}")
-    public void page_title_should_be(String expectedTitle) {
-        Assert.assertTrue(titleOfLogInPage.contains(expectedTitle));
+    @When("Users gets the title of the home pages and title of home page {string}")
+    public void users_gets_the_title_of_the_home_pages_and_title_of_home_page(String expectedHomePageTitle) {
+        String actualHomePageTitle =  loginPage.getHomePageTitle();
+        System.out.println("Home page title ==>"+actualHomePageTitle);
+        Assert.assertEquals(actualHomePageTitle,expectedHomePageTitle);
+    }
+
+    @Then("User click SignIn button and User validate that sign in button there")
+    public void user_click_sign_in_button_and_user_validate_that_sign_in_button_there() {
+        loginPage.signInButtonClick();
+        boolean buttOnCheck =  loginPage.signInButtonValidate();
+        Assert.assertTrue(buttOnCheck);
+    }
+
+    @Then("User land on sign in page and capture title of log in page")
+    public void user_land_on_sign_in_page_and_capture_title_of_log_in_page() {
+       String title =  loginPage.loginPageTitle();
+        System.out.println(title);
     }
 
 
-    @When("forgot password link should bd display")
-    public void forgot_password_link_should_bd_display() {
-
-      Assert.assertTrue(loginPage.isForgotPasswordLinkExist());
+    @Then("User Enter Email address {string} and password  {string}")
+    public void user_enter_email_address_and_password(String userName, String password) {
+        loginPage.enterUserName(userName);
+        loginPage.enterPassword(password);
     }
 
-    @When("user enter username {string}")
-    public void user_enter_username(String username) {
-
-      loginPage.enterPassword(username);
+    @Then("User click on Sign in button")
+    public void user_click_on_sign_in_button() {
+       loginPage.signInButtonClick();
     }
-    @When("user enter password {string}")
-    public void user_enter_password(String password) {
 
-       loginPage.enterPassword(password);
+    @Then("User Also Check Forgot your password link")
+    public void user_also_check_forgot_your_password_link() {
+     boolean linkDisplay =  loginPage.isForgotPasswordLinkExist();
+     Assert.assertTrue(linkDisplay);
     }
-    @When("user click on log in button")
-    public void user_click_on_log_in_button() {
 
-       loginPage.clickOnLogInButton();
-    }
-    @Then("user get the title of the accountPage {string}")
-    public void user_get_the_title_of_the_account_page(String accountPageTitle) {
+//    @Then("User get the title of the accountPage {string}")
+//    public void user_get_the_title_of_the_account_page(String string) {
+//
+//    }
 
-      String titleOfAccountPage =  loginPage.getLoginPageTitle();
-        System.out.println("Title of account page : "+titleOfAccountPage);
-        Assert.assertTrue(titleOfAccountPage.contains(accountPageTitle));
-    }
+//    @Then("User click sign out button")
+//    public void user_click_sign_out_button() {
+//        loginPage.clickOnSignOutButton();
+//    }
 
 
 
